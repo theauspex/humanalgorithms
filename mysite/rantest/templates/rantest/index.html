@@ -1,0 +1,9 @@
+{% if context %}
+    <ul>
+    {% for question in context %}
+        <li><a href="/polls/{{ question.color_name }}/">{{ question.color_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
